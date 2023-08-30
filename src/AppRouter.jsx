@@ -8,12 +8,12 @@ export const AppRouter = () => {
     <Routes>
       <Route path='/' element={<NavBar />}>
         <Route index element={<HomePage />} />
-        <Route path='/search' element={<SearchPage />} />
+        <Route path='/Search' element={<SearchPage />} />
         <Route path='/pokemon/:id' element={<ModalPage />} />
-        <Route path='/stats' element={<StatsPage />} />
+        <Route path='/Stats' element={<StatsPage />} />
       </Route>
 
-      <Route path='Error' element={<ErrorPage />} />
+      <Route path='*' element={<ErrorPage />} />
     </Routes>
   )
 }

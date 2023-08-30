@@ -2,8 +2,12 @@ import { useContext } from 'react'
 import { Link, Outlet, useNavigate } from 'react-router-dom'
 import { StatsPage } from '../Pages'
 import '../sass/NavBar.scss'
+import { PokemonContext } from '../Context/PokemonContext'
 
 export const NavBar = () => {
+
+  const {} = useContext(PokemonContext)
+
   return (
     <div className='navbar-container'>
 
@@ -14,7 +18,7 @@ export const NavBar = () => {
             alt='Logo Pokedex'
           />
         </Link>
-        <Link to='/StatsPage' element={<StatsPage />} className='logo'>
+        <Link to='/Stats' element={<StatsPage />} className='navbar-stats'>
           Stats
         </Link>
         {/*onSubmit={onSearchSubmit}*/}
@@ -44,7 +48,7 @@ export const NavBar = () => {
             />
           </div>
 
-          <button className='btn-search'>Buscar</button>
+          <button className='btn-search'>Buscar </button>
         </form>
       </header>
 

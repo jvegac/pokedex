@@ -21,7 +21,6 @@
 	--color-fairy: #fdb9e9;
 	--color-shadow: #7b62a3;
 	--color-unknow: #757575;
-
 	--color-primary: #006d77;
 	--color-primary-hover: #83c5be;
 }
@@ -52,6 +51,11 @@ header {
 
 .logo img {
 	width: 150px;
+}
+.navbar-stats{
+    color: #9F9F9F;
+    text-decoration: none;
+    font-size: 25px;
 }
 
 header form {
