@@ -1,5 +1,3 @@
 export * from './ErrorPage'
 export * from './HomePage'
-export * from './ModalPage'
-export * from './SearchPage'
 export * from './StatsPage'
