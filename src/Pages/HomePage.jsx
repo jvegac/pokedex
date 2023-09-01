@@ -1,7 +1,9 @@
 import React from 'react'
 import { FaFilter } from 'react-icons/fa';
-import { PokemonList } from '../Components'
-import '../sass/index.scss'
+import { PokemonList, FilterBar } from '../Components'
+import '../sass/ListaPokemons.scss'
+
+
 
 export const HomePage = () => {
   return (
@@ -12,6 +14,7 @@ export const HomePage = () => {
       <div className="lista-pokemons">
         <PokemonList />
       </div>
+      <FilterBar />
     </>
   )
 }

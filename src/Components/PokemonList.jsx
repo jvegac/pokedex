@@ -1,14 +1,17 @@
-import React, {useContext}from 'react'
+import React, { useContext, useState } from 'react'
 import { PokemonContext } from '../Context/PokemonContext'
-import { CardPokemon } from './CardPokemon'
+import { CardPokemon, ModalCard } from './index'
+import '../sass/ListaPokemons.scss'
+
 
 export const PokemonList = () => {
- const {initPokemons} = useContext(PokemonContext)
-    return (
+  const { initPokemons } = useContext(PokemonContext)
+
+  return (
     <>
-        <div className="lista-pokemons">
-        {initPokemons.map(pokemon => <CardPokemon pokemon={pokemon} key ={pokemon.id}/>)}
-        </div>
+      <div className="lista-pokemons">
+        {initPokemons.map(pokemon => <CardPokemon pokemon={pokemon} key={pokemon.id}/>)}
+      </div>
     </>
   )
 }
