@@ -24,7 +24,6 @@
 }
 
 .pokemon-card {
-
   margin: 1rem;
   height: 100px;
   width: 250px;
@@ -62,9 +61,7 @@
 .pokemon-card-info {
   display: flex;
   flex-direction: column;
-
   margin-bottom: 5px;
-
 }
 
 .span-card-abilities {
@@ -76,7 +73,6 @@
 
 
 .pokemon-card-image-container {
-  padding-left: 18px;
   display: flex;
   justify-content: left;
   align-items: end;

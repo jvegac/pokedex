@@ -1,12 +1,15 @@
-import React, { useState} from 'react'
+import React, { useState } from 'react'
 import '../sass/CardPokemon.scss'
-import { Link } from 'react-router-dom'
 import { iniMayuscula } from '../../helper/helper'
+import { ModalCard } from './ModalCard'
 
-export const CardPokemon = ({ pokemon, onClick }) => {
+export const CardPokemon = ({ pokemon }) => {
+    const [Modal, setModal] = useState(false)
+    const handleModalOpen = () => setModal(true)
+    const handleModalClose = () => setModal(false)
     return (
         <>
-            <div className="pokemon-card" onClick={onClick} >
+            <div className="pokemon-card" onClick={() => handleModalOpen()} >
                 <div className="pokemon-card-info-container">
                     <div className="pokemon-card-name">
                         {iniMayuscula(pokemon.name)}
@@ -37,6 +40,9 @@ export const CardPokemon = ({ pokemon, onClick }) => {
                         src={pokemon.sprites.other.dream_world.front_default} />
                 </div>
             </div>
+            <ModalCard onClose={handleModalClose()} />
         </>
+
+
     )
 }

@@ -88,17 +88,15 @@ export const PokemonProvider = ({ children }) => {
         })
 
         if (e.target.checked) {
-            const filteredResults = allPokemons.filter(pokemon => pokemon.types.map(type=>type.type.name)
+            const filteredResults = allPokemons.filter(pokemon => pokemon.types.map(type => type.type.name)
                 .includes(e.target.name))
             setFilteredPokemons([...filteredPokemons, ...filteredResults])
-        } else{
-            const filteredResults = filteredPokemons.filter(pokemon => !pokemon.types.map(type=>type.type.name)
+        } else {
+            const filteredResults = filteredPokemons.filter(pokemon => !pokemon.types.map(type => type.type.name)
                 .includes(e.target.name))
             setFilteredPokemons([...filteredResults])
         }
     }
-
-
 
     return (
         <PokemonContext.Provider value={{
@@ -112,5 +110,7 @@ export const PokemonProvider = ({ children }) => {
         </PokemonContext.Provider>
 
     )
+
+
 
 }
