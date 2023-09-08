@@ -37,10 +37,10 @@ export const CardPokemon = ({ pokemon }) => {
                 </div>
                 <div className="pokemon-card-image-container">
                     <img className="pokemon-modal-img" alt={`Pokemon ${pokemon.name}`}
-                        src={pokemon.sprites.other.dream_world.front_default} />
+                        src={pokemon.sprites.other.dream_world.front_default || pokemon.sprites.front_default} />
                 </div>
             </div>
-            <ModalCard onClose={handleModalClose()} />
+           
         </>
 
 

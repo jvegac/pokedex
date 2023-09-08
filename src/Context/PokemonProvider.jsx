@@ -10,6 +10,7 @@ export const PokemonProvider = ({ children }) => {
     //Estados
     const [loading, setLoading] = useState(true)
     const [active, setActive] = useState(false)
+    const [loadMore, setLoadMore] = useState(true)
 
     //Llamado a los primeros 30 pokemones
     const getPokemons = async (limit = 30) => {
